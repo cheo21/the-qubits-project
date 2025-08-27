@@ -7,30 +7,20 @@ run:
 linters:
   enable:
     - errcheck
-    - gosimple
     - govet
     - ineffassign
     - staticcheck
     - unused
     - revive
-    - gofumpt
     - misspell
-    - stylecheck
     - gosec
     - nilerr
     - unparam
-    - exportloopref
     - prealloc
     - dupl
     - gocyclo
     - nakedret
   disable:
-    - deadcode
-    - exhaustivestruct
-    - ifshort
-    - interfacer
-    - maligned
-    - golint
   settings:
     gocyclo:
         min-complexity: 15
@@ -39,3 +29,6 @@ linters:
     misspell:
         locale: US
 
+formatters:
+  enable:
+    - gofumpt
