@@ -1,0 +1,41 @@
+run:
+  timeout: 5m
+  tests: true
+
+linters:
+  enable:
+    - errcheck
+    - gosimple
+    - govet
+    - ineffassign
+    - staticcheck
+    - typecheck
+    - unused
+    - revive
+    - gofumpt
+    - misspell
+    - stylecheck
+    - gosec
+    - nilerr
+    - unparam
+    - exportloopref
+    - prealloc
+    - dupl
+    - gocyclo
+    - nakedret
+  disable:
+    - deadcode
+    - exhaustivestruct
+    - ifshort
+    - interfacer
+    - maligned
+    - golint
+
+linters-settings:
+  gocyclo:
+    min-complexity: 15
+  revive:
+    severity: warning
+  misspell:
+    locale: US
+
