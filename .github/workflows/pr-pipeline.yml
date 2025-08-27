@@ -24,6 +24,9 @@ jobs:
   golanci:
     name: Lint
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
@@ -37,4 +40,5 @@ jobs:
       uses: golangci/golangci-lint-action@v8
       with:
         version: v2.1
+        args: --out-format=github-actions
 
